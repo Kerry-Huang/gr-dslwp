@@ -32,7 +32,7 @@
 #include <gnuradio/io_signature.h>
 #include "kiss_encode_pdu_impl.h"
 
-#include <unistd.h>
+//#include <unistd.h>
 
 namespace gr {
   namespace dslwp {
@@ -102,7 +102,7 @@ namespace gr {
 			}
 			kiss_encode_pdu_impl::message_port_pub(kiss_encode_pdu_impl::d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(d_const_length, (const uint8_t *)buf_kiss+sent)));
 			sent += d_const_length;
-			usleep(10);
+			//usleep(10);
 		}
 	}
     }

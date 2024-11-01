@@ -70,7 +70,9 @@ typedef struct hk_uv_t
 	// 72
 } hk_uv_t;
 
-typedef struct __attribute__((__packed__))
+// typedef struct __attribute__((__packed__))
+#pragma pack(1)
+typedef struct
 {
 	uint32_t seconds_since_epoch     : 32;
 	uint8_t n_cmd_exe                : 8;

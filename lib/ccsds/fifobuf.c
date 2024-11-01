@@ -231,7 +231,7 @@ int16_t fifo_pop_q15(FIFOBuffer_q15 *fb)
 /**
  * Make the fifo empty, discarding all its current contents.
  */
-inline void fifo_flush(FIFOBuffer *fb)
+void fifo_flush(FIFOBuffer *fb)
 {
 	//ASSERT_VALID_FIFO(fb);
 	fb->head = fb->tail;

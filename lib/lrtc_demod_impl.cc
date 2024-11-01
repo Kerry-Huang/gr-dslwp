@@ -107,11 +107,11 @@ namespace gr {
             	
             	if(d_buf_freq_est[d_i_avg_buf][d_index_pwr_max]>=d_freq_est)
             	{
-            		out[nout] = sqrt(d_buf_pwr_est[d_i_avg_buf][d_index_pwr_max]/d_pwr_max*d_n_avg)+1j*d_freq_est;
+            		out[nout] = {sqrt(d_buf_pwr_est[d_i_avg_buf][d_index_pwr_max]/d_pwr_max*d_n_avg), d_freq_est};
             	}
             	else
             	{
-            		out[nout] = -sqrt(d_buf_pwr_est[d_i_avg_buf][d_index_pwr_max]/d_pwr_max*d_n_avg)+1j*d_freq_est;
+            		out[nout] = {-sqrt(d_buf_pwr_est[d_i_avg_buf][d_index_pwr_max]/d_pwr_max*d_n_avg), d_freq_est};
             	}
             	//out[nout] = d_buf_freq_est[d_i_avg_buf][d_index_pwr_max] + 1j * d_freq_est;
             	nout++;

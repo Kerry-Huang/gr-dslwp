@@ -116,5 +116,5 @@ void fifo_init(FIFOBuffer *fb, unsigned char *buf, uint32_t size);
 void fifo_init_q15(FIFOBuffer_q15 *fb, int16_t *buf, uint32_t size);
 uint32_t fifo_len(FIFOBuffer *fb);
 
-
+#define __builtin_expect(EXP, C)  (EXP)
 #endif /* STRUCT_FIFO_H */

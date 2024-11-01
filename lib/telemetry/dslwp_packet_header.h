@@ -16,7 +16,9 @@ typedef struct __attribute__((__packed__))
 } packet_header_t;
 */
 
-typedef struct __attribute__((__packed__))
+//typedef struct __attribute__((__packed__))
+#pragma pack(1)
+typedef struct
 {
 	unsigned int packet_data_len				: 16;
 	unsigned int source_sequence_count			: 14;
